@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>keyboard</title>
+  <style type="text/css">
+    body {background-color: #A9A9A9;}
+    div.desc {
+      position: absolute;
+      width: 330px;
+      left: 80px;
+      font-size: 230%;
+    }
+    div.keyboard {
+      border:outset gray;
+      padding: 5px;
+      width: 1050px;
+      margin: auto;
+      position: absolute;
+    }
+    div.key {
+      border-style: outset;
+      border-width: 5px;
+      border-color: gray;
+      width: 60px;
+      height: 40px;
+      text-align: center;
+      line-height: 37px;
+      font-size: 150%;
+      display: inline-block;
+      background-color: dimgray;
+      color: whitesmoke;
+    }
+    div.tab {width:80px;}
+    div.ctrl-left {
+      width:100px;
+      color: purple;
+    }
+    div.shift-left {width:138px;}
+    div.alt-left {
+      width:76px;
+      color: purple;
+    }
+    div.win-left {width:80px;}
+    div.num-alt {
+      width:80px;
+      color: purple;
+    }
+    div.space {width:400px;}
+    div.esc {
+      width:80px;
+      color: purple;
+    }
+    div.win-right {width:80px;}
+    div.menu {width:80px;}
+    div.ctrl-right {width:68px;}
+    div.shift-right {width: 152px;}
+    div.enter {width: 115px;}
+    div.tilda {width: 80px;}
+    div.backspace {color: purple;}
+
+    div#keyboard-normal {
+      top: 3%;
+      left: 23%;
+    }
+    div#desc-normal {
+      top: 130px;
+    }
+
+    div#keyboard-shift {
+      top: 35%;
+      left: 23%;
+    }
+    div.with-shift {
+      color: cyan;
+    }
+    div#shift-left{
+      background-color: black;
+    }
+    div#desc-shift {
+      top: 420px;
+    }
+
+    div#keyboard-num {
+      top: 67%;
+      left: 23%;
+    }
+    div.with-num {
+      color: cyan;
+    }
+    div#num-alt{
+      background-color: black;
+    }
+    div#desc-num {
+      top: 700px;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- <form action="http://localhost:9001/articles" method="post" enctype="multipart/form-data">
+    <input type="file" name="input" />
+    <input type="submit" value="submit" />
+  </form> -->
+
+  <div>
+    <div class="keyboard" id="keyboard-normal">
+      <div>
+        <div class="key">$</div>
+        <div class="key">'</div>
+        <div class="key">[</div>
+        <div class="key">{</div>
+        <div class="key">}</div>
+        <div class="key">(</div>
+        <div class="key">=</div>
+        <div class="key">*</div>
+        <div class="key">)</div>
+        <div class="key">+</div>
+        <div class="key">]</div>
+        <div class="key">!</div>
+        <div class="key">%</div>
+        <div class="key tilda">~</div>
+      </div>
+      <div>
+        <div class="key tab">Tab</div>
+        <div class="key">:</div>
+        <div class="key">,</div>
+        <div class="key">.</div>
+        <div class="key">p</div>
+        <div class="key">y</div>
+        <div class="key">f</div>
+        <div class="key">g</div>
+        <div class="key">c</div>
+        <div class="key">r</div>
+        <div class="key">l</div>
+        <div class="key">/</div>
+        <div class="key backspace">&lt;-</div>
+        <div class="key pipe">|</div>
+      </div>
+      <div>
+        <div class="key ctrl-left">Ctrl</div>
+        <div class="key">a</div>
+        <div class="key">o</div>
+        <div class="key">e</div>
+        <div class="key">u</div>
+        <div class="key">i</div>
+        <div class="key">d</div>
+        <div class="key">h</div>
+        <div class="key">t</div>
+        <div class="key">n</div>
+        <div class="key">s</div>
+        <div class="key">-</div>
+        <div class="key enter">Enter</div>
+      </div>
+      <div>
+        <div class="key shift-left">Shift</div>
+        <div class="key">"</div>
+        <div class="key">q</div>
+        <div class="key">j</div>
+        <div class="key">k</div>
+        <div class="key">x</div>
+        <div class="key">b</div>
+        <div class="key">m</div>
+        <div class="key">w</div>
+        <div class="key">v</div>
+        <div class="key">z</div>
+        <div class="key shift-right">Shift</div>
+      </div>
+      <div>
+        <div class="key alt-left">Alt</div>
+        <div class="key win-left">Win</div>
+        <div class="key num-alt">Num</div>
+        <div class="key space">Space</div>
+        <div class="key esc">Esc</div>
+        <div class="key win-right">Win</div>
+        <div class="key menu">Menu</div>
+        <div class="key ctrl-right">Ctrl</div>
+      </div>
+    </div>
+    <div class="desc" id="desc-normal">normal mode</div>
+  </div>
+
+
+  <div>
+    <div class="keyboard" id="keyboard-shift">
+      <div>
+        <div class="key with-shift">^</div>
+        <div class="key with-shift">#</div>
+        <div class="key with-shift">@</div>
+        <div class="key with-shift">&amp;</div>
+        <div class="key">}</div>
+        <div class="key">(</div>
+        <div class="key">=</div>
+        <div class="key">*</div>
+        <div class="key">)</div>
+        <div class="key">+</div>
+        <div class="key">]</div>
+        <div class="key">!</div>
+        <div class="key">%</div>
+        <div class="key tilda">~</div>
+      </div>
+      <div>
+        <div class="key tab">Tab</div>
+        <div class="key with-shift">;</div>
+        <div class="key with-shift">&lt;</div>
+        <div class="key with-shift">&gt;</div>
+        <div class="key with-shift">P</div>
+        <div class="key with-shift">Y</div>
+        <div class="key with-shift">F</div>
+        <div class="key with-shift">G</div>
+        <div class="key with-shift">C</div>
+        <div class="key with-shift">R</div>
+        <div class="key with-shift">L</div>
+        <div class="key with-shift">?</div>
+        <div class="key backspace">&lt;-</div>
+        <div class="key pipe with-shift">\</div>
+      </div>
+      <div>
+        <div class="key ctrl-left">Ctrl</div>
+        <div class="key with-shift">A</div>
+        <div class="key with-shift">O</div>
+        <div class="key with-shift">E</div>
+        <div class="key with-shift">U</div>
+        <div class="key with-shift">I</div>
+        <div class="key with-shift">D</div>
+        <div class="key with-shift">H</div>
+        <div class="key with-shift">T</div>
+        <div class="key with-shift">N</div>
+        <div class="key with-shift">S</div>
+        <div class="key with-shift">_</div>
+        <div class="key enter">Enter</div>
+      </div>
+      <div>
+        <div class="key shift-left" id="shift-left">Shift</div>
+        <div class="key with-shift">`</div>
+        <div class="key with-shift">Q</div>
+        <div class="key with-shift">J</div>
+        <div class="key with-shift">K</div>
+        <div class="key with-shift">X</div>
+        <div class="key with-shift">B</div>
+        <div class="key with-shift">M</div>
+        <div class="key with-shift">W</div>
+        <div class="key with-shift">V</div>
+        <div class="key with-shift">Z</div>
+        <div class="key shift-right">Shift</div>
+      </div>
+      <div>
+        <div class="key alt-left">Alt</div>
+        <div class="key win-left">Win</div>
+        <div class="key num-alt">Num</div>
+        <div class="key space">Space</div>
+        <div class="key esc">Esc</div>
+        <div class="key win-right">Win</div>
+        <div class="key menu">Menu</div>
+        <div class="key ctrl-right">Ctrl</div>
+      </div>
+    </div>
+    <div class="desc" id="desc-shift">after pressing Shift</div>
+  </div>
+
+  <div>
+    <div class="keyboard" id="keyboard-num">
+      <div>
+        <div class="key">$</div>
+        <div class="key">'</div>
+        <div class="key">[</div>
+        <div class="key">{</div>
+        <div class="key">}</div>
+        <div class="key">(</div>
+        <div class="key">=</div>
+        <div class="key with-num">7</div>
+        <div class="key with-num">8</div>
+        <div class="key with-num">9</div>
+        <div class="key">]</div>
+        <div class="key">!</div>
+        <div class="key">%</div>
+        <div class="key tilda">~</div>
+      </div>
+      <div>
+        <div class="key tab">Tab</div>
+        <div class="key">:</div>
+        <div class="key">,</div>
+        <div class="key">.</div>
+        <div class="key">p</div>
+        <div class="key">y</div>
+        <div class="key">f</div>
+        <div class="key with-num">4</div>
+        <div class="key with-num">5</div>
+        <div class="key with-num">6</div>
+        <div class="key">l</div>
+        <div class="key">/</div>
+        <div class="key backspace">&lt;-</div>
+        <div class="key pipe">|</div>
+      </div>
+      <div>
+        <div class="key ctrl-left">Ctrl</div>
+        <div class="key">a</div>
+        <div class="key">o</div>
+        <div class="key">e</div>
+        <div class="key">u</div>
+        <div class="key">i</div>
+        <div class="key">d</div>
+        <div class="key with-num">1</div>
+        <div class="key with-num">2</div>
+        <div class="key with-num">3</div>
+        <div class="key">s</div>
+        <div class="key">-</div>
+        <div class="key enter">Enter</div>
+      </div>
+      <div>
+        <div class="key shift-left">Shift</div>
+        <div class="key">"</div>
+        <div class="key">q</div>
+        <div class="key">j</div>
+        <div class="key">k</div>
+        <div class="key">x</div>
+        <div class="key">b</div>
+        <div class="key with-num">0</div>
+        <div class="key">w</div>
+        <div class="key with-num">.</div>
+        <div class="key">z</div>
+        <div class="key shift-right">Shift</div>
+      </div>
+      <div>
+        <div class="key alt-left">Alt</div>
+        <div class="key win-left">Win</div>
+        <div class="key num-alt" id="num-alt">Num</div>
+        <div class="key space">Space</div>
+        <div class="key esc">Esc</div>
+        <div class="key win-right">Win</div>
+        <div class="key menu">Menu</div>
+        <div class="key ctrl-right">Ctrl</div>
+      </div>
+    </div>
+    <div class="desc" id="desc-num">after pressing Num</div>
+  </div>
+
+</body>
+</html>
